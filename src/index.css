@@ -132,11 +132,12 @@ button:hover{
   width: 100%;
   max-width: 1000px;
   display: flex;
-  justify-content: center;
+ 
 }
 
 .footer__link--wrapper {
   display: flex;
+justify-content: space-between;
 
 }
 
