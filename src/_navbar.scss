@@ -1,0 +1,45 @@
+@import "colors";
+
+%align-center{display:flex;
+align-items: center;}
+
+.navbar {
+  height: 80px;
+  background: $light;
+  @extend %align-center;
+  padding: 0rem calc((100vw - 1300px) / 2);
+  justify-content: space-between;
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.25);
+  z-index:10;
+
+&__logo {
+  color: $dark;
+  font-size: 1.;
+  font-weight: 550;
+  padding: 0 1.5rem;
+}
+
+&__menu--links {
+  color: $dark;
+  padding: 0 1.5rem;
+}
+
+&__menu--links:hover {
+  color: $normal;
+  font-size:1.6rem;
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
