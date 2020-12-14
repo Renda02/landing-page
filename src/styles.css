@@ -1,4 +1,4 @@
-.navbar, .navbar__logo, .navbar__menu, .navbar__menu--links {
+.navbar, .navbar__logo, .navbar__menu, .navbar__menu--links, .to-top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -94,6 +94,10 @@
   padding: 0;
   font-family: "Poppins", sans-serif;
   text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .hero {
@@ -297,5 +301,31 @@
   color: #f1f1f1;
   -webkit-transition: 0.3 ease-out;
   transition: 0.3 ease-out;
+}
+
+.to-top {
+  background: #2379CD;
+  position: fixed;
+  bottom: 16px;
+  right: 32px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 32px;
+  color: #1f1f1f;
+  text-decoration: none;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.to-top.active {
+  bottom: 32px;
+  pointer-events: auto;
+  opacity: 1;
 }
 /*# sourceMappingURL=styles.css.map */
