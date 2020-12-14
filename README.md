@@ -1,2 +1,2 @@
 # landing-page
-#A responsive website using HTML and CSS.
+#A responsive website built using HTML and SCSS.
