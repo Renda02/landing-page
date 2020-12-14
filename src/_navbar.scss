@@ -1,7 +1,10 @@
 @import "colors";
+@import "media-queries";
 
-%align-center{display:flex;
-align-items: center;}
+%align-center {
+  display: flex;
+  align-items: center;
+}
 
 .navbar {
   height: 80px;
@@ -10,36 +13,67 @@ align-items: center;}
   padding: 0rem calc((100vw - 1300px) / 2);
   justify-content: space-between;
   box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.25);
-  z-index:10;
+  z-index: 10;
 
-&__logo {
-  color: $dark;
-  font-size: 1.;
-  font-weight: 550;
-  padding: 0 1.5rem;
+  &__logo {
+    color: $normal;
+    font-size: 2rem;
+    @extend %align-center;
+    margin: 24px;
+  }
+
+  &__menu--links:hover {
+    color: $normal;
+    font-size: 1.6rem;
+  }
+
+  &__bars {
+    opacity: 0;
+
+    @include tablet {
+      color: $dark;
+      opacity: 1;
+      position: absolute;
+      top: 22px;
+      font-size: 2rem;
+      right: 20px;
+    }
+  }
+
+  &__menu {
+    @extend %align-center;
+    list-style: none;
+    text-align: center;
+    margin-right: 24px;
+
+    @include tablet {
+      display: none;
+    }
+
+    &--links {
+      color: $normal;
+      padding: 0 1.5rem;
+      @extend %align-center;
+      justify-content: center;
+      text-decoration: none;
+    
+      &:hover {
+        color: $normal;
+        font-size: 1.6rem;
+      }
+    }
+    #button{
+      padding:12px 24px;
+      border:none;
+      outline:none;
+      border-radius:5px;
+      background-color: $dark;
+      margin-left:16px;
+      color:$light;
+
+  &:hover{background:$medium;
+    transition: all 0.3s ease;
+    }
+  }
 }
-
-&__menu--links {
-  color: $dark;
-  padding: 0 1.5rem;
 }
-
-&__menu--links:hover {
-  color: $normal;
-  font-size:1.6rem;
-
-}
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
