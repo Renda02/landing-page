@@ -1,4 +1,4 @@
-.navbar, .navbar__logo, .navbar__menu, .navbar__menu--links, .column-right, .footer {
+.navbar, .navbar__logo, .navbar__menu, .navbar__menu--links, .column-right, .footer, .to-top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -21,7 +21,7 @@
 
 .navbar__logo {
   color: #23120b;
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin: 24px;
 }
 
@@ -312,25 +312,25 @@ html {
 }
 
 .grid__article {
-  border: 1px solid #ccc;
+  border: 1px solid #f1f1f1;
   -webkit-box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
           box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
-  border-radius: 3px;
+  border-radius: 5px;
   text-align: center;
 }
 
 .grid__article:hover {
-  -webkit-transition: -webkit-transform .1s ease-out;
-  transition: -webkit-transform .1s ease-out;
-  transition: transform .1s ease-out;
-  transition: transform .1s ease-out, -webkit-transform .1s ease-out;
+  -webkit-transition: -webkit-transform 0.1s ease-out;
+  transition: -webkit-transform 0.1s ease-out;
+  transition: transform 0.1s ease-out;
+  transition: transform 0.1s ease-out, -webkit-transform 0.1s ease-out;
   -webkit-transform: translateY(5px);
           transform: translateY(5px);
 }
 
 .grid__image {
   width: 100%;
-  padding: 1rem 0 0 0;
+  padding: 1rem;
 }
 
 .grid__text {
@@ -341,12 +341,16 @@ html {
   color: #2379CD;
 }
 
+.grid__content {
+  color: #23120b;
+}
+
 .grid__btn {
   font-size: 1rem;
   background-color: #2379CD;
   padding: 1rem;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   color: #f1f1f1;
   margin-top: 2rem;
   cursor: pointer;
@@ -365,5 +369,31 @@ html {
   .grid__btn:hover {
     margin: 0 3rem;
   }
+}
+
+.to-top {
+  background: #2379CD;
+  position: fixed;
+  bottom: 16px;
+  right: 32px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 32px;
+  color: #FACE48;
+  text-decoration: none;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.to-top.active {
+  bottom: 32px;
+  pointer-events: auto;
+  opacity: 1;
 }
 /*# sourceMappingURL=styles.css.map */
