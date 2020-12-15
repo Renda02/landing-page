@@ -85,9 +85,9 @@ html {
 }
 
 .column-right {
-  display: flex;
+   @extend %align-center;
   justify-content: center;
-  align-items: center;
+  
   padding: 0rem 2rem;
 
   &-image {
@@ -99,10 +99,10 @@ html {
 .footer {
   background-color: #131313;
   padding: 2rem 0;
-  display: flex;
+   @extend %align-center;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  
   width: 100%;
 
   &__links {
@@ -152,27 +152,72 @@ html {
   }
 }
 
-.to-top {
-  background: $dark;
-  position: fixed;
-  bottom: 16px;
-  right:32px;
-  width:50px;
-  height:50px;
-  border-radius: 50%;
-  @extend %align-center;
-  justify-content: center;
-  font-size:32px;
-  color:#1f1f1f;
-  text-decoration: none;
-  opacity:0;
-  pointer-events: none;
-  transition: all .4s;
+.grid{
+   margin: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  align-items: stretch;
 
-&.active {
-  bottom:32px;
-  pointer-events: auto;
-  opacity:1;
+    @include tablet{    grid-template-columns: 1fr;
+    margin: 1rem 2rem;}
+
+
+  &__article{
+     border: 1px solid $light;
+  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+  border-radius: 5px;
+  text-align: center;
+  
+
+  &:hover{
+  transition: transform .1s ease-out;
+  transform: translateY(5px);
 }
+  
 }
 
+&__image{
+  width: 100%;
+  padding: 1rem ;
+}
+
+
+
+&__text{
+    padding: 0 20px 20px;
+}
+
+&__heading{
+  color:$dark;
+}
+
+&__content{
+color:$nomal;
+}
+
+&__btn{
+  font-size: 1rem;
+    background-color: $dark;
+    padding: 1rem ;
+    border: none;
+    border-radius: 5px;
+    color: $light;
+    margin-top: 2rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s;
+    outline: none;
+
+    &:hover {
+      background: $medium;
+      color: $light;
+
+      @include tablet {
+        margin: 0 3rem;
+      }
+    }
+
+}
+
+}
