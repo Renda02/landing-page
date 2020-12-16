@@ -110,7 +110,9 @@ html {
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   min-height: 100vh;
-  padding: 3rem calc((100vw - 1300px) / 2);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1300px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -295,7 +297,7 @@ html {
   margin: 30px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
+  -ms-grid-columns: (1fr)3;
       grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
   -webkit-box-align: stretch;
